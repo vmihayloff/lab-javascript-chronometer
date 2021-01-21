@@ -39,11 +39,10 @@ function clearSplits() {
 }
 
 function setStopBtn() {
-  // ... your code goes here
 }
 
+
 function setSplitBtn() {
-  // ... your code goes here
 }
 
 function setStartBtn() {
@@ -56,10 +55,18 @@ function setResetBtn() {
 
 // Start/Stop Button
 btnLeft.addEventListener('click', () => {
-  // ... your code goes here
+  if (chronometer.currentTime === 0){
+    chronometer.startClick();
+    btnLeft.classList.remove('start')
+    btnLeft.classList.add('stop')
+  } else {
+    chronometer.stopClick();
+    btnLeft.classList.remove('stop')
+    btnLeft.classList.add('start')
+  }
 });
 
 // Reset/Split Button
 btnRight.addEventListener('click', () => {
-  // ... your code goes here
+  
 });
